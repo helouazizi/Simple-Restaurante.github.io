@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #a09c9c;
+    margin: 0%;
+    padding: 0%;
+}
+
+
+    /* this style sheet for top banner and logo */
+.banner{
+  
+    margin: 0%;
+    width: auto;
+    padding: 50px;
+    background-color: #a14c2f;
+    text-align: center;
+    color: #000000;
+    font-family: pacifico;
+
+}
+
+    /* let add  a stylish navbar */
+
+
+
+.menu{
+    
+    margin-top: 50px;
+    margin-left: 10px;
+    position: fixed;
+    width: 80px;
+    height:300px;
+    background-color: rgb(198, 202, 206);
+    padding: 15px;
+    border-radius: 30px;
+}
+
+.menu a{
+    display: block;
+    float: left;
+    text-decoration: none;
+    color: #a14c2f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    margin-top: 40px;
+}
+
+.order{
+    width: 80px;
+    height: 50px;
+    position: fixed;
+    background-color: aliceblue;
+    margin-left: 10px;
+    border-radius: 30px;
+    margin-top: 350px;
+    border: none;
+    color: #a14c2f;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+}
+
+    /* this for content in the body */
+    
+.content{
+   
+    background-color: rgba(255, 228, 196, 0);
+    float: right;
+    height: fit-content;
+    width: 90%;
+    margin-top: 30px;
+    
+}
+
+.animo{    
+    display: block;
+    float: right;
+    background-color: rgb(134, 160, 160);
+    width: 250px;
+    height: 300px;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 8px;
+    margin: 20px 40px;
+    animation: rotate 5s linear 4s 3 alternate-reverse both;
+    text-align: center;
+}
+
+.content img{
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    border-radius: 10px;
+    
+}
+
+
+
+
+
+

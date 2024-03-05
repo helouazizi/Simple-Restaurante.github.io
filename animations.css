@@ -1,0 +1,106 @@
+
+/* let add somme animation to our banner */
+
+.icon{
+    width: 40px;
+    height: 40px;
+    margin-top: -300px;
+    
+    
+}
+
+
+#burg1{
+    animation-name: burg1;
+    animation-duration: 30s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    
+}
+
+#burg2{
+    animation-name: burg2;
+    animation-duration: 30s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    
+}
+
+#burg3{
+    animation-name: burg3;
+    animation-duration: 30s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    
+}
+
+#burg4{
+    animation-name: burg4;
+    animation-duration: 30s;
+    animation-delay: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    
+}
+
+@keyframes burg1 {
+    0% { translate: 10px 30px;}
+    10% { translate: 50px 40px;}
+    50% { translate: 100px 10px;}
+    70% { translate: 700px 50px;}
+    85% { translate: 300px 10px;}
+    90% { translate: 600px -100px;}
+    950% { translate: 10px 40px;}
+    100% { translate: -300px 60px;}
+    
+}
+
+@keyframes burg2 {
+    0% { translate: -10px 30px;}
+    10% { translate: -50px 40px;}
+    50% { translate: -100px 10px;}
+    70% { translate: -700px 50px;}
+    85% { translate: -300px 10px;}
+    90% { translate: -600px -10px;}
+    950% { translate: -10px 40px;}
+    100% { translate: 0 50px;}
+    
+}
+
+@keyframes burg3 {
+    0% { translate: 20px 50px;}
+    10% { translate: 100px -40px;}
+    50% { translate: 100px 10px;}
+    70% { translate: 300px 20px;}
+    85% { translate: 300px 10px;}
+    90% { translate: 60px -300px;}
+    950% { translate: 10px 40px;}
+    100% { translate: 40px -600;}
+    
+}
+
+@keyframes burg4 {
+    0% { translate: 10px -60px;}
+    10% { translate: -50px 40px;}
+    50% { translate: -100px -70px;}
+    70% { translate: 700px 50px;}
+    85% { translate: -300px 10px;}
+    90% { translate: 600px -100px;}
+    950% { translate: 10px 40px;}
+    100% { translate: 0px 60px;}
+    
+}
+
+
+    /* this just for animation div */
+
+
+/*@keyframes rotate {
+
+    from { transform:rotate(0deg) ;}
+    to { transform: rotate(360deg); background-color: #000000;}
+         
+}*/
