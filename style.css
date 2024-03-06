@@ -64,39 +64,31 @@ body{
 
     /* this for content in the body */
     
-.content{
-   
-    background-color: rgba(255, 228, 196, 0);
-    float: right;
-    height: fit-content;
+.container {
+    /*background-color: aquamarine;*/
     width: 90%;
-    margin-top: 30px;
+    float: right;
+    margin: 50px 50px;
     
 }
 
-.animo{    
+.container div {
     display: block;
     float: right;
-    background-color: rgb(134, 160, 160);
-    width: 250px;
-    height: 300px;
-    border: 5px solid rgb(255, 255, 255);
-    border-radius: 8px;
-    margin: 20px 40px;
-    animation: rotate 5s linear 4s 3 alternate-reverse both;
     text-align: center;
+    align-content: center;
+    margin: 10px;
+    width: 300px;
+    height: 350px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: -5px 5px rgb(118, 104, 104);
 }
 
-.content img{
-    width: 200px;
+.container div img {
+    display: block;
+    width: 70%;
     height: 200px;
-    margin-top: 10px;
-    border-radius: 10px;
+    margin: 15%;
     
 }
-
-
-
-
-
-
