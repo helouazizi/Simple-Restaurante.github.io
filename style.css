@@ -1,94 +1,107 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Madimi+One&family=Pacifico&display=swap');
+
+
+
+
+* {
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
 }
 
-body{
-    background-color: #a09c9c;
+body {
+    background-color: gray;
     margin: 0%;
     padding: 0%;
-}
-
-
-    /* this style sheet for top banner and logo */
-.banner{
-  
-    margin: 0%;
-    width: 100%;
-    padding: 50px;
-    background-color: #a14c2f;
-    text-align: center;
-    color: #000000;
-    font-family: pacifico;
-
-}
-
-    /* let add  a stylish navbar */
-
-
-
-.menu{
     
-    margin-top: 50px;
-    margin-left: 10px;
-    position: fixed;
-    width: 80px;
-    height:300px;
-    background-color: rgb(198, 202, 206);
-    padding: 15px;
-    border-radius: 30px;
 }
 
-.menu a{
+.parent {
+    width: 100%;
+    display: grid;
+    gap: 5px;
+    grid-template-columns: repeat(12,auto);
+    grid-template-rows: repeat(12,auto);
+}
+
+.parent div {
+    width: 100%;
+    height: 200px;
+    background-color: brown;
+}
+
+.parent .hero {
+    background-color: coral;
+    grid-column: 1/-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: madimi one ;
+}
+
+.parent .aside {
+    background-color: beige;
+    height: 100%;
+    grid-row: 2/6;
+    grid-column: 1/3;
+    
+    display: block;
+    text-align: center;
+    border-radius: 20px;
+    
+    
+}
+
+
+
+.parent .aside a  {
+    display: block;
+    margin: 40px 0px;
+    color: chocolate;
+    /*background-color: aqua;*/
+}
+
+.parent .content {
+    background-color: blueviolet;
+    grid-column: 3/-1;
+    height: auto;
+}
+.parent .content div {
     display: block;
     float: left;
-    text-decoration: none;
-    color: #a14c2f;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    margin-top: 40px;
+    width: 200px;
+    height: 250px;
+    background-color: chartreuse;
+    margin: 2px;
 }
 
-.order{
-    width: 80px;
-    height: 50px;
-    position: fixed;
-    background-color: aliceblue;
-    margin-left: 10px;
-    border-radius: 30px;
-    margin-top: 350px;
-    border: none;
-    color: #a14c2f;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
+
+
+
+
+.parent .footer {
+    background-color: black;
+    grid-column: 1/-1;
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    gap: 10px;
 }
 
-    /* this for content in the body */
-    
-.container {
-    /*background-color: aquamarine;*/
-    width: 90%;
+.footer div {
+    background-color: cadetblue;
     float: right;
-    margin: 50px 50px;
     
 }
 
-.container div {
-    display: block;
-    float: right;
-    text-align: center;
-    align-content: center;
-    margin: 10px;
-    width: 300px;
-    height: 350px;
-    background-color: #ffffff;
-    border-radius: 20px;
-    box-shadow: -5px 5px rgb(118, 104, 104);
-}
 
-.container div img {
-    display: block;
-    width: 70%;
-    height: 200px;
-    margin: 15%;
-    
-}
+
+
+
+
+
+
+
+
+
+
