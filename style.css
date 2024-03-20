@@ -108,7 +108,12 @@ body {
     color: aliceblue;    
 }
 
+/* this about the menu page */
 
+.fhead {
+    color: rgb(64, 47, 15);
+    text-align: center;
+}
 
 
 
