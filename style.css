@@ -90,6 +90,10 @@ body {
     color: rgba(23, 23, 23, 0.869);
     padding: 30px ;
     margin-right: 10%;
+    text-transform: uppercase;
+    text-align: center;
+    text-underline-offset: 30px;
+    
 }
 .parent .content div {
     display: inline-block;
