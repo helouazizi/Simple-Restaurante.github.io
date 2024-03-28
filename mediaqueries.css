@@ -24,4 +24,8 @@
     .content-header {
         margin-right: 0px;
     }
+
+    .menubtn {
+        display: none;
+    }
 }
