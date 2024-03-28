@@ -11,7 +11,7 @@
 }
 
 body {
-    background-color: rgb(196, 196, 196);
+    background-color: rgb(111, 102, 99);
     margin: 0%;
     padding: 0%;
     
@@ -33,7 +33,7 @@ body {
 }
 
 .parent .hero {
-    background-color: rgba(151, 90, 67, 0.864);
+    background-color: rgba(231, 129, 91, 0.864);
     grid-column: 1/-1;
     display: flex;
     justify-content: center;
@@ -42,7 +42,7 @@ body {
 }
 
 .parent .aside {
-    background-color: beige;
+    background-color: rgba(255, 255, 255, 0.803);
     height: 300px;
     /*grid-row: 2/5;*/
     grid-column: 1/2;
@@ -51,7 +51,7 @@ body {
     text-align: center;
     border-radius: 20px;
     margin: 20px;
-    margin-top: 190px;
+    margin-top: 160px;
     
     z-index: 5;
     
@@ -87,15 +87,15 @@ body {
 }
 .content-header {
     font-family: cursive;
-    color: rgba(99, 79, 79, 0.869);
-    padding: 50px ;
+    color: rgba(23, 23, 23, 0.869);
+    padding: 30px ;
     margin-right: 10%;
 }
 .parent .content div {
     display: inline-block;
     width: 300px;
     height: 350px;
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0.378);
     margin: 20px;
     text-align: start;
     padding: 10px;
