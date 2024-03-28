@@ -93,7 +93,23 @@ body {
     text-transform: uppercase;
     text-align: center;
     text-underline-offset: 30px;
-    
+}
+
+.menubtn {
+    display: block;
+    background-color: rgba(165, 42, 42, 0);
+    display: none;
+}
+
+.menubtn button {
+    padding:10px 30px ;
+    margin: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.138);
+    color: rgba(255, 255, 255, 0.885);
+    font-size: large;
+    border: 1px solid orangered;
+    border-radius: 15px;
+    cursor: pointer;
 }
 .parent .content div {
     display: inline-block;

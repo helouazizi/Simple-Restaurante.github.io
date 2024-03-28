@@ -4,9 +4,11 @@ let menu = document.querySelector('.menu');
 let about = document.querySelector('.about');
 let contact = document.querySelector('.contact');
 let contentheader = document.querySelector('.content-header');
+let menubtn = document.querySelector('.menubtn');
 
 // lets get acces the card element
 let card = document.querySelector('.card');
+let cards = document.getElementById('card');
 let foodimg = document.querySelector('.foodimg');
 let foodname = document.querySelector('.foodname');
 let foodprice = document.querySelector('.foodprice');
@@ -21,5 +23,7 @@ menu.addEventListener('click',function(){
     home.classList.remove('active');
     contentheader.textContent = 'Our menu';
     contentheader.style.textDecorationLine = 'underline ';
+    menubtn.style.display = 'block';
+
     
 })
