@@ -50,6 +50,7 @@ body {
     display: block;
     text-align: center;
     border-radius: 20px;
+    width: 100px;
     margin: 20px;
     margin-top: 170px;
     
@@ -81,7 +82,7 @@ body {
 }
 
 .parent .content {
-    /*background-color: blueviolet;*/
+    background-color: rgba(137, 43, 226, 0);
     grid-column: 2/-1;
     height: auto;
     text-align: center;
