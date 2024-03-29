@@ -189,6 +189,9 @@ body {
     height: 300px;
     width: 100%;
     color: rgb(238, 139, 16);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     
     
 }
