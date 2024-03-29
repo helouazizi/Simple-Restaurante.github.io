@@ -30,10 +30,10 @@ let menubtn = document.querySelector('.menubtn');
 
 
 // let get acces the menu buttons
-let allfoodmenu = document.querySelector('.allfood');
-let breakfastmenu = document.querySelector('.breakfast');
-let lunchmenu = document.querySelector('.lunch');
-let dinnermenu = document.querySelector('.dinner');
+let allfoodbtn = document.querySelector('.allfoodbtn');
+let breakfastbtn = document.querySelector('.breakfastbtn');
+let lunchbtn = document.querySelector('.lunchbtn');
+let dinnerbtn = document.querySelector('.dinnerbtn');
 
 
 // =========== lets strat coding the menu page inside the home page ========//
@@ -41,7 +41,7 @@ let dinnermenu = document.querySelector('.dinner');
 
 //******lets create all breakfast cards********//
 
-let breakfast = document.querySelectorAll('.breakfast');
+//let breakfast = document.querySelectorAll('.breakfast');
 let breakfasts = [
     {
         img : 'photos/breakfast-cofe.jpg',
@@ -139,13 +139,13 @@ create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
 // if you just add a card and ther is no data check the console
-
+let breakfast = document.querySelectorAll('.breakfast'); // i drop it here after creating it 
 
 
 //******lets create all dinner cards********//
 
 
-let dinner = document.querySelectorAll('.dinner');
+//let dinner = document.querySelectorAll('.dinner');
 let dinners = [
     {
         img : 'photos/dinner-chawaya.jpg',
@@ -243,13 +243,13 @@ create_dinners_cards();
 create_dinners_cards();
 create_dinners_cards();
 // if you just add a card and there is no data check the console
-
+let dinner = document.querySelectorAll('.dinner'); // drop it here after creating it 
 
 
 //******lets create all lunch cards********//
 
 
-let lunch = document.querySelectorAll('.lunch');
+//let lunch = document.querySelectorAll('.lunch');
 let lunchs = [
     {
         img : 'photos/lunch-burger.jpg',
@@ -347,7 +347,7 @@ create_lunchs_cards();
 create_lunchs_cards();
 create_lunchs_cards();
 // if you just add a card and ther is no data check the console
-
+let lunch = document.querySelectorAll('.lunch');// drop it here after creating it
 
 
 // lets get acces the all cards  now
@@ -358,15 +358,63 @@ menu.addEventListener('click',function(){
     contentheader.textContent = 'Our menu';
     contentheader.style.textDecorationLine = 'underline ';
     menubtn.style.display = 'block';
-    
-    hideallcontent();
+    allfoodbtn.style.background = 'black';
 });
 
-function hideallcontent(){
-    for(let i = 0; i < cards.length; i++){
-        cards[i].style.display = 'none'
-    }
-}
+// lets show just breakfasts 
+breakfastbtn.addEventListener('click',function(){
+    allfoodbtn.style.background = '';
+    this.style.background = 'black';
+    hidealldinners();
+    hidealllunchs();
+});
+
+
+// lets show just lunchs 
+lunchbtn.addEventListener('click',function(){
+    allfoodbtn.style.background = '';
+    breakfastbtn.style.background = '';
+    this.style.background = 'black';
+    hidealldinners();
+    hideallbreakfasts();
+});
+
+
+// lets show just dinners 
+dinnerbtn.addEventListener('click',function(){
+    allfoodbtn.style.background = '';
+    breakfastbtn.style.background = '';
+    lunchbtn.style.background = '';
+    this.style.background = 'black';
+    hidealllunchs();
+    hideallbreakfasts();
+});
+
+
+// this function hide all breakfasts 
+function hideallbreakfasts(){
+    for(let i = 0; i < breakfast.length; i++){
+        breakfast[i].style.display = 'none';
+    };
+};
+
+// this function hide all dinners
+function hidealldinners(){
+    for(let i = 0; i < dinner.length; i++){
+        dinner[i].style.display = 'none';
+    };
+};
+
+// this function hide all lunch 
+function hidealllunchs(){
+    for(let i = 0; i < lunch.length; i++){
+        lunch[i].style.display = 'none';
+    };
+};
+
+// this function shows all content
+
+
 
 
 
@@ -380,6 +428,7 @@ function create_breackfasts_cards(){
     if(curentcard < breakfasts.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
+            newcard.classList.add('breakfast');
 
         content.appendChild(newcard);
 
@@ -422,6 +471,7 @@ function create_dinners_cards(){
     if(curentcard1 < dinners.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
+            newcard.classList.add('dinner');
         
         content.appendChild(newcard);
 
@@ -462,6 +512,7 @@ function create_lunchs_cards(){
     if(curentcard2 < lunchs.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
+            newcard.classList.add('lunch');
         
         content.appendChild(newcard);
 
