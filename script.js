@@ -76,10 +76,11 @@ let breakfasts = [
 ];
 
 /* lets create function that set breakfast img dynamicly */
-let curentcard = 0 ; // this variable here tobe globale to use him in the createcards() function below
+let curentcard ; // this variable here tobe globale to use him in the createcards() function below
 function breakfast_img(){
     //let curentcard = 0 ;
-    for( let j = 0; j < foodimg.length; j++){
+    curentcard = 0 ;
+    for( let j = 0; j < foodimg.length ; j++){
         
         foodimg[j].src  = breakfasts[curentcard].img;
         curentcard ++ ;
@@ -124,12 +125,13 @@ function breakfast_description(){
 };
 breakfast_description();
 
+// now display breacfast  cards
 create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
-//create_breackfasts_cards(); // if you just add a card and ther is no data check the console
+create_breackfasts_cards(); // if you just add a card and ther is no data check the console
 
 
 
@@ -173,8 +175,67 @@ let dinners = [
         hisname :'morocan spagitti',
         hisdescription : 'this is the moeocan spagitti dinner',
         hisprice : '50 DH',
-    }
+    },
 ];
+
+/* lets create function that set dinners img dynamicly */
+let curentcard1 ; // this variable here tobe globale to use him in the createcards() function below
+function dinner_img(){
+    //let curentcard = 0 ;
+    curentcard1 = 0 ;
+    for( let j = 0; j < foodimg.length; j++){
+        
+        foodimg[j].src  = dinners[curentcard1].img;
+        curentcard1 ++ ;
+        //console.log(curentcard);
+    };
+};
+dinner_img();
+
+/* lets create function that set dinners name dynamicly */
+function dinner_name(){
+    let curentcard1 = 0 ;
+    for( let j = 0; j < foodname.length; j++){
+        
+        foodname[j].textContent  = dinners[curentcard1].hisname;
+        curentcard1 ++ ;
+        //console.log(curentcard);
+    };
+};
+dinner_name();
+
+/* lets create function that set dinners price dynamicly */
+function dinner_price(){
+    let curentcard1 = 0 ;
+    for( let j = 0; j < foodprice.length; j++){
+        
+        foodprice[j].textContent  = dinners[curentcard1].hisprice;
+        curentcard1 ++ ;
+        //console.log(curentcard);
+    };
+};
+dinner_price();
+
+/* lets create function that set dinners description dynamicly */
+function dinner_description(){
+    let curentcard1 = 0 ;
+    for( let j = 0; j < fooddescription.length; j++){
+        
+        fooddescription[j].textContent  = dinners[curentcard1].hisdescription;
+        curentcard1 ++ ;
+        //console.log(curentcard);
+    };
+};
+dinner_description();
+
+// now display dinner cards
+create_dinners_cards();
+create_dinners_cards();
+create_dinners_cards();
+create_dinners_cards();
+create_dinners_cards();
+create_dinners_cards();
+
 
 
 
@@ -286,11 +347,49 @@ function create_breackfasts_cards(){
         curentcard++ ;
     }else{
         console.log('there is no enougph data for breackfsts please add some data to breackfasts array to be displayed');
-    }
+    };
     // this variable need to be incremented if we want to redeclare this function many time to avoid seme card content
 };
-console.log(cards);
 
+
+// this function about creating dinners cadrs dynamicly
+function create_dinners_cards(){
+    if(curentcard1 < dinners.length){
+        let newcard = document.createElement('div');
+            newcard.classList.add('card');
+        
+        content.appendChild(newcard);
+
+        let newimg = document.createElement('img');
+            newimg.src = dinners[curentcard1].img;
+            newimg.classList.add('foodimg');
+        
+        let newname = document.createElement('h2');
+            newname.innerHTML = dinners[curentcard1].hisname;
+            newname.classList.add('foodname');
+
+        let newprice = document.createElement('span');
+            newprice.textContent = dinners[curentcard1].hisprice;
+            newprice.classList.add('foodprice');
+
+        let newdescription = document.createElement('p');
+            newdescription.textContent = dinners[curentcard1].hisdescription;
+            newdescription.classList.add('fooddescription');
+
+        let newordrebtn = document.createElement('button');
+            newordrebtn.textContent = 'orde me';
+            newordrebtn.classList.add('foodordre');
+        newcard.appendChild(newimg);
+        newcard.appendChild(newname);
+        newcard.appendChild(newprice);
+        newcard.appendChild(newdescription);
+        newcard.appendChild(newordrebtn);
+        curentcard1++ ;
+    }else{
+        console.log('there is no enougph data for dinners please add some data to dinners array to be displayed');
+    };
+};
+console.log(cards);
 
 
 
