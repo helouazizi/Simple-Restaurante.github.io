@@ -131,7 +131,8 @@ create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
-create_breackfasts_cards(); // if you just add a card and ther is no data check the console
+create_breackfasts_cards();
+// if you just add a card and ther is no data check the console
 
 
 
@@ -235,7 +236,7 @@ create_dinners_cards();
 create_dinners_cards();
 create_dinners_cards();
 create_dinners_cards();
-
+// if you just add a card and there is no data check the console
 
 
 
@@ -282,10 +283,68 @@ let lunchs = [
     }
 ];
 
+/* lets create function that set lunch img dynamicly */
+let curentcard2 ; // this variable here tobe globale to use him in the createcards() function below
+function lunch_img(){
+    //let curentcard = 0 ;
+    curentcard2 = 0 ;
+    for( let j = 0; j < foodimg.length; j++){
+        
+        foodimg[j].src  = lunchs[curentcard2].img;
+        curentcard2 ++ ;
+        //console.log(curentcard);
+    };
+};
+lunch_img();
+
+/* lets create function that set lunch name dynamicly */
+function lunch_name(){
+    let curentcard2 = 0 ;
+    for( let j = 0; j < foodname.length; j++){
+        
+        foodname[j].textContent  = lunchs[curentcard2].hisname;
+        curentcard2 ++ ;
+        //console.log(curentcard);
+    };
+};
+lunch_name();
+
+/* lets create function that set lunch price dynamicly */
+function lunch_price(){
+    let curentcard2 = 0 ;
+    for( let j = 0; j < foodprice.length; j++){
+        
+        foodprice[j].textContent  = lunchs[curentcard2].hisprice;
+        curentcard2 ++ ;
+        //console.log(curentcard);
+    };
+};
+lunch_price();
+
+/* lets create function that set lunch description dynamicly */
+function lunch_description(){
+    let curentcard2 = 0 ;
+    for( let j = 0; j < fooddescription.length; j++){
+        
+        fooddescription[j].textContent  = lunchs[curentcard2].hisdescription;
+        curentcard2 ++ ;
+        //console.log(curentcard);
+    };
+};
+lunch_description();
+
+// now display lunch cards
+create_lunchs_cards();
+create_lunchs_cards();
+create_lunchs_cards();
+create_lunchs_cards();
+create_lunchs_cards();
+create_lunchs_cards();
+// if you just add a card and ther is no data check the console
 
 
 
-// lets get acces the all cards 
+// lets get acces the all cards  now
 let cards = document.querySelectorAll('.card');
 menu.addEventListener('click',function(){
     menu.classList.add('active');
@@ -387,6 +446,46 @@ function create_dinners_cards(){
         curentcard1++ ;
     }else{
         console.log('there is no enougph data for dinners please add some data to dinners array to be displayed');
+    };
+};
+
+
+
+// this function about creating dinners cadrs dynamicly
+function create_lunchs_cards(){
+    if(curentcard2 < lunchs.length){
+        let newcard = document.createElement('div');
+            newcard.classList.add('card');
+        
+        content.appendChild(newcard);
+
+        let newimg = document.createElement('img');
+            newimg.src = lunchs[curentcard2].img;
+            newimg.classList.add('foodimg');
+        
+        let newname = document.createElement('h2');
+            newname.innerHTML = lunchs[curentcard2].hisname;
+            newname.classList.add('foodname');
+
+        let newprice = document.createElement('span');
+            newprice.textContent = lunchs[curentcard2].hisprice;
+            newprice.classList.add('foodprice');
+
+        let newdescription = document.createElement('p');
+            newdescription.textContent = lunchs[curentcard2].hisdescription;
+            newdescription.classList.add('fooddescription');
+
+        let newordrebtn = document.createElement('button');
+            newordrebtn.textContent = 'orde me';
+            newordrebtn.classList.add('foodordre');
+        newcard.appendChild(newimg);
+        newcard.appendChild(newname);
+        newcard.appendChild(newprice);
+        newcard.appendChild(newdescription);
+        newcard.appendChild(newordrebtn);
+        curentcard2++ ;
+    }else{
+        console.log('there is no enougph data for lunchs please add some data to lunchs array to be displayed');
     };
 };
 console.log(cards);
