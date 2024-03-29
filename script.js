@@ -14,6 +14,12 @@ let foodprice = document.querySelector('.foodprice');
 let fooddescription = document.querySelector('.fooddescription');
 let foodordre = document.querySelector('.foodordre');
 
+// let get acces the menu buttons
+let allfood = document.querySelector('.allfood');
+let breakfast = document.querySelector('.breakfast');
+let lunch = document.querySelector('.lunch');
+let dinner = document.querySelector('.dinner');
+
 
 // =========== lets strat coding the menu page inside the home page ========//
 
