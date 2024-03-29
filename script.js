@@ -364,30 +364,40 @@ menu.addEventListener('click',function(){
 // lets show just breakfasts 
 breakfastbtn.addEventListener('click',function(){
     allfoodbtn.style.background = '';
+    dinnerbtn.style.background = '';
+    lunchbtn.style.background = '';
     this.style.background = 'black';
-    hidealldinners();
-    hidealllunchs();
+    
 });
 
 
 // lets show just lunchs 
 lunchbtn.addEventListener('click',function(){
     allfoodbtn.style.background = '';
+    dinnerbtn.style.background = '';
     breakfastbtn.style.background = '';
     this.style.background = 'black';
-    hidealldinners();
-    hideallbreakfasts();
+    
 });
 
 
 // lets show just dinners 
 dinnerbtn.addEventListener('click',function(){
-    allfoodbtn.style.background = '';
     breakfastbtn.style.background = '';
     lunchbtn.style.background = '';
+    allfoodbtn.style.background = '';
     this.style.background = 'black';
-    hidealllunchs();
-    hideallbreakfasts();
+   
+});
+
+
+// lets show all cards
+allfoodbtn.addEventListener('click',function(){
+    breakfastbtn.style.background = '';
+    lunchbtn.style.background = '';
+    dinnerbtn.style.background = '';
+    this.style.background = 'black';
+    
 });
 
 
@@ -412,15 +422,59 @@ function hidealllunchs(){
     };
 };
 
+// this function shhow all breakfasts 
+function showallbreakfasts(){
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+};
+
+// this function show all lunchs
+function showalllunchs(){
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+}
+
+// this function show all dinners
+function showalldinners(){
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+}
+
 // this function shows all content
+function showallcards(){
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
+    create_breackfasts_cards();
 
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
+    create_dinners_cards();
 
-
-
-
-
-
-
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+    create_lunchs_cards();
+};
 
 // this function about creating breakfasts cadrs dynamicly
 function create_breackfasts_cards(){
@@ -460,7 +514,7 @@ function create_breackfasts_cards(){
         
         curentcard++ ;
     }else{
-        console.log('there is no enougph data for breackfsts please add some data to breackfasts array to be displayed');
+        //console.log('there is no enougph data for breackfsts please add some data to breackfasts array to be displayed');
     };
     // this variable need to be incremented if we want to redeclare this function many time to avoid seme card content
 };
@@ -501,7 +555,7 @@ function create_dinners_cards(){
         newcard.appendChild(newordrebtn);
         curentcard1++ ;
     }else{
-        console.log('there is no enougph data for dinners please add some data to dinners array to be displayed');
+        //console.log('there is no enougph data for dinners please add some data to dinners array to be displayed');
     };
 };
 
@@ -542,7 +596,7 @@ function create_lunchs_cards(){
         newcard.appendChild(newordrebtn);
         curentcard2++ ;
     }else{
-        console.log('there is no enougph data for lunchs please add some data to lunchs array to be displayed');
+       // console.log('there is no enougph data for lunchs please add some data to lunchs array to be displayed');
     };
 };
 console.log(cards);
