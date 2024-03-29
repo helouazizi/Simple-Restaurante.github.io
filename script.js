@@ -124,6 +124,12 @@ function breakfast_description(){
 };
 breakfast_description();
 
+create_breackfasts_cards();
+create_breackfasts_cards();
+create_breackfasts_cards();
+create_breackfasts_cards();
+create_breackfasts_cards();
+//create_breackfasts_cards(); // if you just add a card and ther is no data check the console
 
 
 
@@ -216,11 +222,7 @@ let lunchs = [
 ];
 
 
-createcards();
-createcards();
-createcards();
-createcards();
-createcards();
+
 
 // lets get acces the all cards 
 let cards = document.querySelectorAll('.card');
@@ -231,50 +233,61 @@ menu.addEventListener('click',function(){
     contentheader.style.textDecorationLine = 'underline ';
     menubtn.style.display = 'block';
     
-    hidecontent();
+    hideallcontent();
 });
 
-function hidecontent(){
+function hideallcontent(){
     for(let i = 0; i < cards.length; i++){
         cards[i].style.display = 'none'
     }
 }
 
-// this function about creating cadrs dynamicly
-function createcards(){
+
+
+
+
+
+
+// this function about creating breakfasts cadrs dynamicly
+function create_breackfasts_cards(){
     
+    if(curentcard < breakfasts.length){
+        let newcard = document.createElement('div');
+            newcard.classList.add('card');
 
-    let newcard = document.createElement('div');
-        newcard.classList.add('card');
+        content.appendChild(newcard);
 
-    content.appendChild(newcard);
+        let newimg = document.createElement('img');
+            newimg.src = breakfasts[curentcard].img;
+            newimg.classList.add('foodimg');
+        
+        let newname = document.createElement('h2');
+            newname.innerHTML = breakfasts[curentcard].hisname;
+            newname.classList.add('foodname');
 
-    let newimg = document.createElement('img');
-        newimg.src = breakfasts[curentcard].img;
-        newimg.classList.add('foodimg');
-    
-    let newname = document.createElement('h2');
-        newname.innerHTML = breakfasts[curentcard].hisname;
-        newname.classList.add('foodname');
+        let newprice = document.createElement('span');
+            newprice.textContent = breakfasts[curentcard].hisprice;
+            newprice.classList.add('foodprice');
 
-    let newprice = document.createElement('span');
-        newprice.textContent = breakfasts[curentcard].hisprice;
-        newprice.classList.add('foodprice');
+        let newdescription = document.createElement('p');
+            newdescription.textContent = breakfasts[curentcard].hisdescription;
+            newdescription.classList.add('fooddescription');
 
-    let newdescription = document.createElement('p');
-        newdescription.textContent = breakfasts[curentcard].hisdescription;
-        newdescription.classList.add('fooddescription');
+        let newordrebtn = document.createElement('button');
+            newordrebtn.textContent = 'orde me';
+            newordrebtn.classList.add('foodordre');
+        newcard.appendChild(newimg);
+        newcard.appendChild(newname);
+        newcard.appendChild(newprice);
+        newcard.appendChild(newdescription);
+        newcard.appendChild(newordrebtn);
 
-    let newordrebtn = document.createElement('button');
-        newordrebtn.textContent = 'orde me';
-        newordrebtn.classList.add('foodordre');
-    newcard.appendChild(newimg);
-    newcard.appendChild(newname);
-    newcard.appendChild(newprice);
-    newcard.appendChild(newdescription);
-    newcard.appendChild(newordrebtn);
-
-    curentcard++ ; // this variable need to be incremented if we want to redeclare this function many time to avoid seme card content
+        
+        curentcard++ ;
+    }else{
+        console.log('there is no enougph data for breackfsts please add some data to breackfasts array to be displayed');
+    }
+    // this variable need to be incremented if we want to redeclare this function many time to avoid seme card content
 };
 console.log(cards);
 
