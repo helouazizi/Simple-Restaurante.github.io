@@ -1,24 +1,40 @@
+
+
+// lets get acces the resturante content
+let content = document.querySelector('.content');
+let contentheader = document.querySelector('.content-header');
+// lets get acces the card element
+let foodimg = document.querySelectorAll('.foodimg');
+let foodname = document.querySelectorAll('.foodname');
+let foodprice = document.querySelectorAll('.foodprice');
+let fooddescription = document.querySelectorAll('.fooddescription');
+let foodordre = document.querySelector('.foodordre');
+
+//createcards();
+
+
+
 // lets get acces the navbar links
 let home = document.querySelector('.home');
 let menu = document.querySelector('.menu');
 let about = document.querySelector('.about');
 let contact = document.querySelector('.contact');
-let contentheader = document.querySelector('.content-header');
 let menubtn = document.querySelector('.menubtn');
 
-// lets get acces the card element
-let cards = document.querySelectorAll('.card');
-let foodimg = document.querySelector('.foodimg');
-let foodname = document.querySelector('.foodname');
-let foodprice = document.querySelector('.foodprice');
-let fooddescription = document.querySelector('.fooddescription');
-let foodordre = document.querySelector('.foodordre');
+
+
+
+
+
+
+
 
 
 // =========== lets strat coding the menu page inside the home page ========//
 
 
-// lets create all breakfast cards
+//******lets create all breakfast cards********//
+
 let breakfast = document.querySelectorAll('.breakfast');
 let breakfasts = [
     {
@@ -59,19 +75,61 @@ let breakfasts = [
     },
 ];
 
-/* lets loop over the breakfast card */
-for( let i = 0; i < breakfast.length; i++){
-    breakfast[i].style.background  = 'green';
+/* lets create function that set breakfast img dynamicly */
+let curentcard = 0 ; // this variable here tobe globale to use him in the createcards() function below
+function breakfast_img(){
+    //let curentcard = 0 ;
+    for( let j = 0; j < foodimg.length; j++){
+        
+        foodimg[j].src  = breakfasts[curentcard].img;
+        curentcard ++ ;
+        //console.log(curentcard);
+    };
 };
+breakfast_img();
 
-/* lets loop over the array   and create function that change card content */
+/* lets create function that set breakfast name dynamicly */
+function breakfast_name(){
+    let curentcard = 0 ;
+    for( let j = 0; j < foodname.length; j++){
+        
+        foodname[j].textContent  = breakfasts[curentcard].hisname;
+        curentcard ++ ;
+        //console.log(curentcard);
+    };
+};
+breakfast_name();
+
+/* lets create function that set breakfast price dynamicly */
+function breakfast_price(){
+    let curentcard = 0 ;
+    for( let j = 0; j < foodprice.length; j++){
+        
+        foodprice[j].textContent  = breakfasts[curentcard].hisprice;
+        curentcard ++ ;
+        //console.log(curentcard);
+    };
+};
+breakfast_price();
+
+/* lets create function that set breakfast price dynamicly */
+function breakfast_description(){
+    let curentcard = 0 ;
+    for( let j = 0; j < fooddescription.length; j++){
+        
+        fooddescription[j].textContent  = breakfasts[curentcard].hisdescription;
+        curentcard ++ ;
+        //console.log(curentcard);
+    };
+};
+breakfast_description();
 
 
 
 
+//******lets create all dinner cards********//
 
 
-// lets create all dinner cards
 let dinner = document.querySelectorAll('.dinner');
 let dinners = [
     {
@@ -112,12 +170,11 @@ let dinners = [
     }
 ];
 
-/* lets loop over the breakfast card */
-for( let i = 0; i < dinner.length; i++){
-    dinner[i].style.background  = 'red';
-};
 
-// lets create all lunchs cards
+
+//******lets create all lunch cards********//
+
+
 let lunch = document.querySelectorAll('.lunch');
 let lunchs = [
     {
@@ -158,21 +215,23 @@ let lunchs = [
     }
 ];
 
-/* lets loop over the breakfast card */
-for( let i = 0; i < lunch.length; i++){
-    lunch[i].style.background  = 'blue';
-};
 
+createcards();
+createcards();
+createcards();
+createcards();
+createcards();
+
+// lets get acces the all cards 
+let cards = document.querySelectorAll('.card');
 menu.addEventListener('click',function(){
     menu.classList.add('active');
     home.classList.remove('active');
     contentheader.textContent = 'Our menu';
     contentheader.style.textDecorationLine = 'underline ';
     menubtn.style.display = 'block';
-    console.log(cards);
-    hidecontent();
-
     
+    hidecontent();
 });
 
 function hidecontent(){
@@ -180,5 +239,45 @@ function hidecontent(){
         cards[i].style.display = 'none'
     }
 }
+
+// this function about creating cadrs dynamicly
+function createcards(){
+    
+
+    let newcard = document.createElement('div');
+        newcard.classList.add('card');
+
+    content.appendChild(newcard);
+
+    let newimg = document.createElement('img');
+        newimg.src = breakfasts[curentcard].img;
+        newimg.classList.add('foodimg');
+    
+    let newname = document.createElement('h2');
+        newname.innerHTML = breakfasts[curentcard].hisname;
+        newname.classList.add('foodname');
+
+    let newprice = document.createElement('span');
+        newprice.textContent = breakfasts[curentcard].hisprice;
+        newprice.classList.add('foodprice');
+
+    let newdescription = document.createElement('p');
+        newdescription.textContent = breakfasts[curentcard].hisdescription;
+        newdescription.classList.add('fooddescription');
+
+    let newordrebtn = document.createElement('button');
+        newordrebtn.textContent = 'orde me';
+        newordrebtn.classList.add('foodordre');
+    newcard.appendChild(newimg);
+    newcard.appendChild(newname);
+    newcard.appendChild(newprice);
+    newcard.appendChild(newdescription);
+    newcard.appendChild(newordrebtn);
+
+    curentcard++ ; // this variable need to be incremented if we want to redeclare this function many time to avoid seme card content
+};
+console.log(cards);
+
+
 
 
