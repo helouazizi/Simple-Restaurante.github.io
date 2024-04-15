@@ -8,7 +8,7 @@ let foodimg = document.querySelectorAll('.foodimg');
 let foodname = document.querySelectorAll('.foodname');
 let foodprice = document.querySelectorAll('.foodprice');
 let fooddescription = document.querySelectorAll('.fooddescription');
-let foodordre = document.querySelector('.foodordre');
+
 
 
 
@@ -478,9 +478,11 @@ function create_lunchs_cards(){
        // console.log('there is no enougph data for lunchs please add some data to lunchs array to be displayed');
     };
 };
-console.log(cards);
 
-//*********************************************************** *//
+
+
+
+//********************** code menu part ************************************* *//
 
 
 menu.addEventListener('click',function(){
@@ -588,3 +590,17 @@ function showallcards(){
     showalldinners();
 };
 
+
+// lets code the ordre button
+let foodordree = document.querySelectorAll('.foodordre');
+console.log( foodordree);
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    foodordree.addEventListener('click', function(){
+        console.log('your ordre');
+    })
+    // Your code here
+    // Access the button element and add event listeners
+});
