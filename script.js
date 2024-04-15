@@ -500,6 +500,7 @@ breakfastbtn.addEventListener('click',function(){
     this.style.background = 'black';
     hidealldinners();
     hidealllunchs();
+    showallbreakfasts();
 });
 
 
@@ -511,8 +512,7 @@ lunchbtn.addEventListener('click',function(){
     this.style.background = 'black';
     hideallbreakfasts();
     hidealldinners();
-    
-    
+    showalllunchs();
 });
 
 
@@ -524,6 +524,7 @@ dinnerbtn.addEventListener('click',function(){
     this.style.background = 'black';
     hideallbreakfasts();
     hidealllunchs();
+    showalldinners();
 });
 
 
@@ -533,7 +534,7 @@ allfoodbtn.addEventListener('click',function(){
     lunchbtn.style.background = '';
     dinnerbtn.style.background = '';
     this.style.background = 'black';
-    
+    showallcards();
 });
 
 
@@ -560,15 +561,15 @@ function hidealllunchs(){
 
 // this function shhow all breakfasts 
 function showallbreakfasts(){
-    for(let i = 0; i < lunch.length; i++){
-        lunch[i].style.display = 'block';
+    for(let i = 0; i < allbreakfasts.length; i++){
+        allbreakfasts[i].style.display = 'inline-block';
     };
 };
 
 // this function show all lunchs
 function showalllunchs(){
-    for(let i = 0; i < dinner.length; i++){
-        dinner[i].style.display = 'block';
+    for(let i = 0; i < lunch.length; i++){
+        lunch[i].style.display = 'inline-block';
     };
 };
 
@@ -576,7 +577,7 @@ function showalllunchs(){
 // this function show all dinners
 function showalldinners(){
     for(let i = 0; i < dinner.length; i++){
-        dinner[i].style.display = 'block';
+        dinner[i].style.display = 'inline-block';
     };
 }
 
