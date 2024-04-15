@@ -10,7 +10,7 @@ let foodprice = document.querySelectorAll('.foodprice');
 let fooddescription = document.querySelectorAll('.fooddescription');
 let foodordre = document.querySelector('.foodordre');
 
-//createcards();
+
 
 
 
@@ -34,6 +34,9 @@ let allfoodbtn = document.querySelector('.allfoodbtn');
 let breakfastbtn = document.querySelector('.breakfastbtn');
 let lunchbtn = document.querySelector('.lunchbtn');
 let dinnerbtn = document.querySelector('.dinnerbtn');
+
+
+
 
 
 // =========== lets strat coding the menu page inside the home page ========//
@@ -139,7 +142,7 @@ create_breackfasts_cards();
 create_breackfasts_cards();
 create_breackfasts_cards();
 // if you just add a card and ther is no data check the console
-let breakfast = document.querySelectorAll('.breakfast'); // i drop it here after creating it 
+let allbreakfasts = document.querySelectorAll('.breakfast06'); // i drop it here after creating it 
 
 
 //******lets create all dinner cards********//
@@ -243,7 +246,7 @@ create_dinners_cards();
 create_dinners_cards();
 create_dinners_cards();
 // if you just add a card and there is no data check the console
-let dinner = document.querySelectorAll('.dinner'); // drop it here after creating it 
+let dinner = document.querySelectorAll('.dinner06'); // drop it here after creating it 
 
 
 //******lets create all lunch cards********//
@@ -347,7 +350,7 @@ create_lunchs_cards();
 create_lunchs_cards();
 create_lunchs_cards();
 // if you just add a card and ther is no data check the console
-let lunch = document.querySelectorAll('.lunch');// drop it here after creating it
+let lunch = document.querySelectorAll('.lunch06');// drop it here after creating it
 
 let cards = document.querySelectorAll('.card');
 
@@ -358,7 +361,7 @@ function create_breackfasts_cards(){
     if(curentcard < breakfasts.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
-            newcard.classList.add('breakfast');
+            newcard.classList.add('breakfast06');
 
         content.appendChild(newcard);
 
@@ -401,7 +404,7 @@ function create_dinners_cards(){
     if(curentcard1 < dinners.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
-            newcard.classList.add('dinner');
+            newcard.classList.add('dinner06');
         
         content.appendChild(newcard);
 
@@ -442,7 +445,7 @@ function create_lunchs_cards(){
     if(curentcard2 < lunchs.length){
         let newcard = document.createElement('div');
             newcard.classList.add('card');
-            newcard.classList.add('lunch');
+            newcard.classList.add('lunch06');
         
         content.appendChild(newcard);
 
@@ -477,5 +480,110 @@ function create_lunchs_cards(){
 };
 console.log(cards);
 
+//*********************************************************** *//
 
+
+menu.addEventListener('click',function(){
+    menu.classList.add('active');
+    home.classList.remove('active');
+    contentheader.textContent = 'Our menu';
+    contentheader.style.textDecorationLine = 'underline ';
+    menubtn.style.display = 'block';
+    allfoodbtn.style.background = 'black';
+});
+
+// lets show just breakfasts 
+breakfastbtn.addEventListener('click',function(){
+    allfoodbtn.style.background = '';
+    dinnerbtn.style.background = '';
+    lunchbtn.style.background = '';
+    this.style.background = 'black';
+    hidealldinners();
+    hidealllunchs();
+});
+
+
+// lets show just lunchs 
+lunchbtn.addEventListener('click',function(){
+    allfoodbtn.style.background = '';
+    dinnerbtn.style.background = '';
+    breakfastbtn.style.background = '';
+    this.style.background = 'black';
+    hideallbreakfasts();
+    hidealldinners();
+    
+    
+});
+
+
+// lets show just dinners 
+dinnerbtn.addEventListener('click',function(){
+    breakfastbtn.style.background = '';
+    lunchbtn.style.background = '';
+    allfoodbtn.style.background = '';
+    this.style.background = 'black';
+    hideallbreakfasts();
+    hidealllunchs();
+});
+
+
+// lets show all cards
+allfoodbtn.addEventListener('click',function(){
+    breakfastbtn.style.background = '';
+    lunchbtn.style.background = '';
+    dinnerbtn.style.background = '';
+    this.style.background = 'black';
+    
+});
+
+
+// this function hide all breakfasts 
+function hideallbreakfasts(){
+    for(let i = 0; i < allbreakfasts.length; i++){
+        allbreakfasts[i].style.display = 'none';
+    };
+};
+
+// this function hide all dinners
+function hidealldinners(){
+    for(let i = 0; i < dinner.length; i++){
+        dinner[i].style.display = 'none';
+    };
+};
+
+// this function hide all lunch 
+function hidealllunchs(){
+    for(let i = 0; i < lunch.length; i++){
+        lunch[i].style.display = 'none';
+    };
+};
+
+// this function shhow all breakfasts 
+function showallbreakfasts(){
+    for(let i = 0; i < lunch.length; i++){
+        lunch[i].style.display = 'block';
+    };
+};
+
+// this function show all lunchs
+function showalllunchs(){
+    for(let i = 0; i < dinner.length; i++){
+        dinner[i].style.display = 'block';
+    };
+};
+
+
+// this function show all dinners
+function showalldinners(){
+    for(let i = 0; i < dinner.length; i++){
+        dinner[i].style.display = 'block';
+    };
+}
+
+// this function shows all content
+function showallcards(){
+    showallbreakfasts();
+    showalllunchs();
+    showalldinners();
+};
 
