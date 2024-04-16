@@ -561,6 +561,14 @@ function hidealllunchs(){
     };
 };
 
+// this functon hide all cards
+
+function hideallcards(){
+    hideallbreakfasts();
+    hidealldinners();
+    hidealllunchs();
+}
+
 // this function shhow all breakfasts 
 function showallbreakfasts(){
     for(let i = 0; i < allbreakfasts.length; i++){
@@ -597,10 +605,15 @@ console.log( foodordree);
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    foodordree.addEventListener('click', function(){
-        console.log('your ordre');
-    })
-    // Your code here
-    // Access the button element and add event listeners
-});
+//********************** lets code the about page **************/
+
+about.addEventListener('click',function(){
+    console.log('about');
+    about.classList.add('active');
+    menu.classList.remove('active');
+    home.classList.remove('active');
+    contentheader.textContent = 'About Us';
+    contentheader.style.textDecorationLine = 'underline ';
+    hideallcards();
+    
+})
