@@ -615,5 +615,15 @@ about.addEventListener('click',function(){
     contentheader.textContent = 'About Us';
     contentheader.style.textDecorationLine = 'underline ';
     hideallcards();
-    
-})
+    menubtn.style.display = 'none';
+    buildaboutcontnet();
+});
+
+
+function buildaboutcontnet(){
+    let aboucontent = document.createElement('section');
+    aboucontent.classList.add('aboutmaincontent');
+    aboucontent.textContent = 'about main text comming soon';
+    content.appendChild(aboucontent);
+}
+
