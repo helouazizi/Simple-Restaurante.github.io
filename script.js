@@ -621,7 +621,7 @@ about.addEventListener('click',function(){
 
 
 function buildaboutcontnet(){
-    let aboucontent = document.createElement('section');
+    let aboucontent = document.createElement('span');
     aboucontent.classList.add('aboutmaincontent');
     aboucontent.textContent = 'about main text comming soon';
     content.appendChild(aboucontent);
