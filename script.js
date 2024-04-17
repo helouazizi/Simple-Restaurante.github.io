@@ -612,11 +612,8 @@ about.addEventListener('click',function(){
     about.classList.add('active');
     menu.classList.remove('active');
     home.classList.remove('active');
-    contentheader.textContent = 'About Us';
-    contentheader.style.textDecorationLine = 'underline ';
-    hideallcards();
-    menubtn.style.display = 'none';
-    buildaboutcontnet();
+    
+    
 });
 
 
