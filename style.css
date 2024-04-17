@@ -219,6 +219,12 @@ body {
     padding: 10px;
 }
 
+.about-img {
+    background-image: url(photos/about.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
 
 
 
