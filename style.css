@@ -236,12 +236,17 @@ body {
     height: 300px;
     width: auto;
     color: rgb(238, 139, 16);
-    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
     
     
+    
 }
+.firsthalf{
+    margin-right: 30%;
+}
+
 
 .sotial-media-footer {
     display: flex;
