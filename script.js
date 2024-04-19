@@ -612,7 +612,7 @@ about.addEventListener('click',function(){
     about.classList.add('active');
     menu.classList.remove('active');
     home.classList.remove('active');
-    
+    scrollY = 4008;
     
 });
 

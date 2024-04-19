@@ -231,16 +231,29 @@ body {
 
 
 .footer {
-    background-color: black;
+    background-color: rgb(157, 238, 223);
     text-align: center;
     height: 300px;
     width: auto;
     color: rgb(238, 139, 16);
-    display: flex;
+    display: block;
     justify-content: center;
     align-items: center;
     
     
+}
+
+.sotial-media-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+.sotial-media-footer img {
+    width: 40px;
+    height: 40px;
 }
 
 
